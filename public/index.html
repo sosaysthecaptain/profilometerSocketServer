@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Profilometer control panel</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js" rel="javascript"></script>
+        <link href="/styles.css" rel="stylesheet"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div id="mario-chat">
+            <div id="chat-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <input id="userID" type="text" placeholder="userID"/>
+            <input id="command" type="text" placeholder="Command"/>
+            <button id="send">Send</button>  
+        </div>
+
+        <script src='/chat.js'></script>
+    </body>
+</html>
