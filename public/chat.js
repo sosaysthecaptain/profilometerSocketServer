@@ -30,16 +30,14 @@ socket.on('command', function(data) {
     feedback.innerHTML = '';
 });
 
-// Listen for typing event from Socket
-// socket.on('typing', function(data) {
-//     feedback.innerHTML = '<p><em>' + data + ' is typing...</em></p>';
-//     setTimeout(function() {
-//         feedback.innerHTML = '';
-//     }, 2000);
-// });
+// Listen for machine status event
+socket.on('status', function(data) {
+    // filter to see if same userID
+    feedback.innerHTML = '<p><em>Machine status: ' + data.status + ' is typing...</em></p>';
+});
 
 // Listen for typing
-command.addEventListener('keypress', function() {
-    // Send a typing message, containing the handle of the typer
-    socket.emit('typing', userID.value);
-});
+// command.addEventListener('keypress', function() {
+//     // Send a typing message, containing the handle of the typer
+//     socket.emit('typing', userID.value);
+// });
