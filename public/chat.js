@@ -1,4 +1,4 @@
-var apiURL = 'https://whispering-forest-82548.herokuapp.com/'
+var apiURL = 'https://damp-sierra-42875.herokuapp.com/'
 
 // Make connection
 var socket = io.connect(apiURL);
